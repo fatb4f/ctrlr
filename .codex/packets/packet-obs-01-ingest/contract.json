@@ -1,0 +1,46 @@
+{
+  "packet_id": "packet-obs-01-ingest",
+  "repo": "ctrlr",
+  "base_ref": "main",
+  "branch": "packet-obs-01-ingest",
+  "allowed_paths": [
+    "tools/external_observer/**",
+    "tests/**",
+    "pyproject.toml",
+    "README.md"
+  ],
+  "forbidden_outputs": [
+    "dist/**",
+    "build/**",
+    "*.egg-info/**",
+    "**/__pycache__/**",
+    "**/.pytest_cache/**",
+    "**/.ruff_cache/**",
+    "**/.mypy_cache/**"
+  ],
+  "diff_budget": {
+    "max_files_changed": 25,
+    "max_lines_changed": 1500
+  },
+  "regen_cmd": null,
+  "test_cmd": "uv run pytest -q",
+  "worktree_policy": {
+    "mode": "worktree",
+    "worktree_root": ".codex/.worktrees",
+    "allow_dirty_pre": false,
+    "allow_dirty_post": false,
+    "dirty_allowlist": [
+      "out/**",
+      ".codex/out/**"
+    ],
+    "untracked_allowlist": [
+      "out/**",
+      ".codex/out/**"
+    ],
+    "require_clean_after_commit": true,
+    "cleanup": {
+      "on_success": "keep",
+      "on_failure": "keep"
+    }
+  }
+}
