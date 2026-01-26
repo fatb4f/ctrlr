@@ -9,5 +9,7 @@ wheels/
 # Virtual environments
 .venv
 
-# Evidence
+# Codex
 out/
+.codex/out
+.codex/.worktrees
