@@ -50,7 +50,7 @@
   "run": {
     "commands": [],
     "regen_cmd": "",
-    "test_cmd": "uv run pytest -q"
+    "test_cmd": "UV_CACHE_DIR=/tmp/uv-cache/packet-ctrlr-03-experiment uv run pytest -q"
   },
   "worktree_policy": {
     "allow_dirty_globs": [
