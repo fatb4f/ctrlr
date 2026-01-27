@@ -33,7 +33,9 @@
       "raw.githubusercontent.com",
       "objects.githubusercontent.com",
       "githubusercontent.com",
-      "git-scm.com"
+      "git-scm.com",
+      "pypi.org",
+      "files.pythonhosted.org"
     ],
     "allowed_http_methods": [
       "GET",
