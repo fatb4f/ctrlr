@@ -33,7 +33,9 @@
       "raw.githubusercontent.com",
       "objects.githubusercontent.com",
       "githubusercontent.com",
-      "git-scm.com"
+      "git-scm.com",
+      "pypi.org",
+      "files.pythonhosted.org"
     ],
     "allowed_http_methods": [
       "GET",
@@ -50,7 +52,7 @@
   "run": {
     "commands": [],
     "regen_cmd": "",
-    "test_cmd": "uv run pytest -q"
+    "test_cmd": "UV_CACHE_DIR=/tmp/uv-cache/packet-ctrlr-04-viz uv run pytest -q"
   },
   "worktree_policy": {
     "allow_dirty_globs": [
