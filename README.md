@@ -2,5 +2,5 @@
 
 - Worktrees: `.codex/.worktrees/<packet_id>` (gitignored)
 - Packets: `.codex/packets/<packet_id>/`
-- Evidence output: `out/<packet_id>/` (gitignored)
+- Evidence output: `.codex/out/<packet_id>/` (gitignored)
 - Rule: All Codex execution occurs inside the packet worktree; repo root remains clean.
