@@ -21,7 +21,7 @@ import subprocess
 import sys
 from typing import Any, Dict, List, Tuple
 
-RUNNER_VERSION = "0.1.2"  # Packet-002
+RUNNER_VERSION = "0.1.3"  # Packet-002
 PLANT_ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
@@ -100,7 +100,21 @@ def gh_available() -> bool:
 
 def gh_find_issue(repo: str, title: str) -> str | None:
     rc, out, err = sh_capture(
-        ["gh", "issue", "list", "--repo", repo, "--search", f"{title} in:title", "--json", "number", "--jq", ".[0].number"]
+        [
+            "gh",
+            "issue",
+            "list",
+            "--repo",
+            repo,
+            "--state",
+            "all",
+            "--search",
+            f"{title} in:title",
+            "--json",
+            "number",
+            "--jq",
+            ".[0].number",
+        ]
     )
     if rc != 0 or not out:
         return None
@@ -116,9 +130,10 @@ def gh_issue_create(
     body: str | None,
 ) -> Tuple[bool, str]:
     cmd = ["gh", "issue", "create", "--repo", repo, "--title", title]
-    if body is None:
-        body = ""
-    cmd += ["--body", body]
+    if not template:
+        if body is None:
+            body = ""
+        cmd += ["--body", body]
     if template:
         cmd += ["--template", template]
     if labels:
