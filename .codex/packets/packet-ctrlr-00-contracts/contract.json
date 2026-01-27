@@ -45,6 +45,7 @@
     "repo": "fatb4f/ctrlr"
   },
   "github_ops_required": true,
+  "net_ops_required": true,
   "network_policy": {
     "additional_domains": [
       "github.com",

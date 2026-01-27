@@ -23,6 +23,7 @@
   },
   "packet_id": "{{packet_id}}",
   "repo": "{{repo}}",
+  "net_ops_required": false,
   "github": {
     "repo": "<org>/<repo>",
     "issue": {
