@@ -1,5 +1,6 @@
 from .contracts import Lens, Phase, Pillar, RunCapsule, Span, Step
 from .control import CtrlrError, ensure, invariant, require
+from .mermaid import to_mermaid_calltree
 from .trace import current_lens, current_span_id, read_jsonl, run, span, step, write_jsonl
 
 __all__ = [
@@ -17,6 +18,7 @@ __all__ = [
     "read_jsonl",
     "require",
     "run",
+    "to_mermaid_calltree",
     "span",
     "step",
     "write_jsonl",
