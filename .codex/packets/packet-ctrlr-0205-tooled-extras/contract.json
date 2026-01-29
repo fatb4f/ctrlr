@@ -1,5 +1,6 @@
 {
   "allowed_paths": [
+    "src/ctrlr/**",
     "pyproject.toml",
     "tests/**",
     "README.md"
