@@ -7,3 +7,22 @@ requires-python = ">=3.12"
 dependencies = [
     "pytest>=9.0.2",
 ]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=9.0.2",
+    "hypothesis>=6.0.0",
+]
+surfacing = [
+    "marimo>=0.10.0",
+]
+inspect = [
+    "snoop>=0.4.3",
+    "birdseye>=0.10.0",
+]
+otel = [
+    "opentelemetry-api>=1.0.0",
+]
+dev = [
+    "ctrlr[test,surfacing,inspect,otel]",
+]
