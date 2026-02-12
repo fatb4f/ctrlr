@@ -1,16 +1,9 @@
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
-
-ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "src"
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
-
-from ctrlr.contracts import Lens, Phase, Pillar
-from ctrlr.trace import read_jsonl, run, span, step, write_jsonl
+from oracle_api.contracts import Lens, Phase, Pillar
+from oracle_api.trace import read_jsonl, run, span, step, write_jsonl
 
 
 def test_trace_jsonl_roundtrip(tmp_path: Path):
@@ -31,7 +24,7 @@ def test_write_read_jsonl(tmp_path: Path):
     lens = Lens(lens_id="lens-2", pillar=Pillar.P2, phase=Phase.STRUCT)
     jsonl_path = tmp_path / "manual.jsonl"
 
-    with run(lens, jsonl_path) as capsule:
+    with run(lens, jsonl_path):
         pass
 
     capsule_out, _, _ = read_jsonl(jsonl_path)

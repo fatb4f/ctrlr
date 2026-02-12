@@ -1,0 +1,11 @@
+{
+  "phase": "STRUCT",
+  "status": "PASS",
+  "validated": [
+    "tp1.extracted.json",
+    "objectives.normalized.json",
+    "objectives.dag.json",
+    "objectives.closure.json"
+  ],
+  "notes": "TP1-only scope. All objectives have TP1 evidence with file+quote hashes. Review buffer empty."
+}

@@ -1,9 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "ctrlr"
+name = "oracle"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gatekeeper repo for oracle_api, oracle_tools, and course content"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "pytest>=9.0.2",
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+  "packages/oracle_api",
+  "packages/oracle_tools",
 ]

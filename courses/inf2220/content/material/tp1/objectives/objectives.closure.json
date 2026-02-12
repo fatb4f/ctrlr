@@ -1,0 +1,16 @@
+{
+  "root_set": [
+    "INF1220-TP1-O-01",
+    "INF1220-TP1-O-02",
+    "INF1220-TP1-O-03",
+    "INF1220-TP1-O-04",
+    "INF1220-TP1-O-05"
+  ],
+  "closure": [
+    "INF1220-TP1-O-01",
+    "INF1220-TP1-O-02",
+    "INF1220-TP1-O-03",
+    "INF1220-TP1-O-04",
+    "INF1220-TP1-O-05"
+  ]
+}

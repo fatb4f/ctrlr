@@ -1,0 +1,107 @@
+{
+  "source": "TP1",
+  "objectives": [
+    {
+      "objective_id": "INF1220-TP1-O-01",
+      "statement": "Design an efficient pseudocode algorithm that decides whether the sum of a positive-number array exceeds 100, using early termination and handling extreme edge cases.",
+      "evidence": [
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Premier problème (statement)",
+          "quote": "Nous souhaitons un algorithme qui détermine si la somme des éléments d'un tableau de nombres positifs excède 100. Par ailleurs, nous souhaitons un algorithme efficace: l'algorithme doit accéder à aussi peu d'éléments du tableau que possible. Produisez un pseudo-code précis et expliquez votre solution. Vous pouvez expliquer le code sous la forme que vous souhaitez, tant que vos explications sont claires. Exécutez votre pseudo-code sur au moins 5 cas, incluant les deux cas suivants: le tableau \\[55,55,55,55\\] et le tableau \\[1,2,3,5,6\\].",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "40f45f7606b8e95a875c299ec7d85b423db1d206a8df5c95046d064ca5e94c67"
+          }
+        },
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Premier problème → Indice 3 (edge case: empty array)",
+          "quote": "3.  **Indice 3.** Votre algorithme doit fonctionner même si le tableau a une longueur de zéro.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "dcc055a75bef63710b4d9fa8127aa25717eb94745ce7d78daf079647fa708307"
+          }
+        },
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Premier problème → Indice 4 (edge case: very large array)",
+          "quote": "4.  **Indice 4.** Votre algorithme doit fonctionner même si le tableau contient mille milliards d'éléments.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "2c63151cb711be053a577befa2c2de7276cc8b88f9773040add5cf2744317417"
+          }
+        }
+      ]
+    },
+    {
+      "objective_id": "INF1220-TP1-O-02",
+      "statement": "Produce precise, readable, language-agnostic pseudocode (not Java/Python) with clear inputs, variables, and outputs.",
+      "evidence": [
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Premier problème (format requirement)",
+          "quote": "Vous devez produire du pseudo-code: du code informatique (par ex. Java ou Python) n'est pas accepté. Votre pseudo-code doit être précis et lisible.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "047c0fcf03ea7986456782055f84351fb23ec96073f92c4acb384f9f9ada57d8"
+          }
+        }
+      ]
+    },
+    {
+      "objective_id": "INF1220-TP1-O-03",
+      "statement": "Execute pseudocode rigorously by tracing it line-by-line and reporting variable values at each step.",
+      "evidence": [
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Premier problème (execution trace requirement)",
+          "quote": "Vous devez exécuter votre pseudo-code ligne-par-ligne en indiquant à chaque ligne quelle est la valeur de toutes les variables. Votre exécution doit être rigoureuse. Si l'algorithme effectue 50 opérations, votre exécution devrait comprendre 50 lignes.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "519214ff116d3c1332cc276cdfd9b69394a81628b5d56c6c14d5717864c92b72"
+          }
+        }
+      ]
+    },
+    {
+      "objective_id": "INF1220-TP1-O-04",
+      "statement": "Diagnose and clearly explain a logical error in given pseudocode (FizzBuzz variant) and provide a corrected version.",
+      "evidence": [
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Second problème (context)",
+          "quote": "Nous souhaitons afficher les nombres entiers de 0 jusqu’à 100 à l’écran (incluant 0 mais excluant 100), en affichant “Fizz” quand le nombre est divisible par 3 et “Buzz” quand le nombre est divisible par 5.\n\n    ...\n    2\n    3 Fizz\n    4\n    5 Buzz\n    6 Fizz\n    ...\n    \n\nUn étudiant nous a offert la solution suivante. Elle est incorrecte. Pour les fins de ce travail, vous pouvez ignorer la mise en page de la sortie (polices de caractères, espaces, etc.). L’erreur de l’étudiant est logique et non pas cosmétique.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "405b6cbbef574b3686d4b1616e0d079deab28fd7bbdfb9656c202d2cdcbb8ec8"
+          }
+        },
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Second problème (tasks: explain error, correct)",
+          "quote": "Expliquez l’erreur et offrez une version corrigée. Exécutez votre pseudo-code corrigé, ainsi que le pseudo-code original. Expliquez les différences. **Vous devez exécuter votre pseudo-code**. Puisqu’il y a peut-être des dizaines d’itérations à calculer, vous pouvez résumer l’exécution sans aller dans chaque détail de chaque itération.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "757138035ddf58fc99a0b0a18b99797bc03babfce06f151779556b02d1c66185"
+          }
+        }
+      ]
+    },
+    {
+      "objective_id": "INF1220-TP1-O-05",
+      "statement": "Compare executions of original versus corrected pseudocode and summarize iterative behavior to highlight logical differences.",
+      "evidence": [
+        {
+          "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+          "locator": "Second problème (tasks: execute both, explain differences)",
+          "quote": "Expliquez l’erreur et offrez une version corrigée. Exécutez votre pseudo-code corrigé, ainsi que le pseudo-code original. Expliquez les différences. **Vous devez exécuter votre pseudo-code**. Puisqu’il y a peut-être des dizaines d’itérations à calculer, vous pouvez résumer l’exécution sans aller dans chaque détail de chaque itération.",
+          "hash_ref": {
+            "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+            "quote_sha256": "757138035ddf58fc99a0b0a18b99797bc03babfce06f151779556b02d1c66185"
+          }
+        }
+      ]
+    }
+  ]
+}

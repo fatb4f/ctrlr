@@ -1,0 +1,13 @@
+{
+  "manifest_id": "inf1220-tp1-material/v0.1.0",
+  "track": "inf1220",
+  "scope": "tp1",
+  "artifacts": [
+    { "path": "content/material/objectives/tp1.extracted.json", "role": "objectives" },
+    { "path": "content/material/objectives/objectives.dag.json", "role": "objective_dag" },
+    { "path": "content/material/theory/theory_blocks.json", "role": "theory" },
+    { "path": "content/material/drills/drill_blocks.json", "role": "drills" },
+    { "path": "content/material/flow/learning_flow.json", "role": "flow" },
+    { "path": "content/material/eval/eval_summary.json", "role": "eval" }
+  ]
+}

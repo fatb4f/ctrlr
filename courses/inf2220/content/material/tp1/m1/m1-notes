@@ -1,0 +1,17 @@
+>M1-07 - intro
+These actions can be mathematical (e.g., sum = a + b), control-based (e.g., IF a > b THEN), or iterative (e.g., WHILE a > b DO).
+
+>M1-07 - Intro
+>What is an algorithm 
+An algorithm is a finite and ordered sequence of instructions for solving a problem or accomplishing a specific task. It is a systematic, precisely defined method that guarantees a correct result when executed.
+
+>What is pseudocode 
+An algorithm is a method for solving a problem, while pseudocode is a tool for expressing that algorithm clearly and universally
+
+>The loop
+A function must always produce the same value given the same data. An algorithm is not limited in this way. For example, an algorithm could be used to randomly choose a name from a list.
+
+Most algorithms in practice are iterative. An iteration is the repetition of a process.
+
+loop: we perform a given task as long as a condition is not met
+

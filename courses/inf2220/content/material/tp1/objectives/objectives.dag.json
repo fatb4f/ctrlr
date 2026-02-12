@@ -1,0 +1,69 @@
+{
+  "graph_id": "inf1220-tp1-objectives-dag/v0.1.0",
+  "nodes": [
+    {
+      "id": "INF1220-TP1-O-01",
+      "label": "Design an efficient pseudocode algorithm that decides whether the sum of a positive-number array exceeds 100, using early termination and handling extreme edge cases."
+    },
+    {
+      "id": "INF1220-TP1-O-02",
+      "label": "Produce precise, readable, language-agnostic pseudocode (not Java/Python) with clear inputs, variables, and outputs."
+    },
+    {
+      "id": "INF1220-TP1-O-03",
+      "label": "Execute pseudocode rigorously by tracing it line-by-line and reporting variable values at each step."
+    },
+    {
+      "id": "INF1220-TP1-O-04",
+      "label": "Diagnose and clearly explain a logical error in given pseudocode (FizzBuzz variant) and provide a corrected version."
+    },
+    {
+      "id": "INF1220-TP1-O-05",
+      "label": "Compare executions of original versus corrected pseudocode and summarize iterative behavior to highlight logical differences."
+    }
+  ],
+  "edges": [
+    {
+      "from": "INF1220-TP1-O-02",
+      "to": "INF1220-TP1-O-01",
+      "type": "support",
+      "justification": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+        "locator": "Premier problème (pseudocode requirement)",
+        "quote": "Vous devez produire du pseudo-code: du code informatique (par ex. Java ou Python) n'est pas accepté. Votre pseudo-code doit être précis et lisible.",
+        "hash_ref": {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "047c0fcf03ea7986456782055f84351fb23ec96073f92c4acb384f9f9ada57d8"
+        }
+      }
+    },
+    {
+      "from": "INF1220-TP1-O-03",
+      "to": "INF1220-TP1-O-01",
+      "type": "support",
+      "justification": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+        "locator": "Premier problème (trace requirement)",
+        "quote": "Vous devez exécuter votre pseudo-code ligne-par-ligne en indiquant à chaque ligne quelle est la valeur de toutes les variables. Votre exécution doit être rigoureuse. Si l'algorithme effectue 50 opérations, votre exécution devrait comprendre 50 lignes.",
+        "hash_ref": {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "519214ff116d3c1332cc276cdfd9b69394a81628b5d56c6c14d5717864c92b72"
+        }
+      }
+    },
+    {
+      "from": "INF1220-TP1-O-04",
+      "to": "INF1220-TP1-O-05",
+      "type": "prerequisite",
+      "justification": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/Travail not#U00e9 1.md",
+        "locator": "Second problème (task ordering)",
+        "quote": "Expliquez l’erreur et offrez une version corrigée. Exécutez votre pseudo-code corrigé, ainsi que le pseudo-code original. Expliquez les différences. **Vous devez exécuter votre pseudo-code**. Puisqu’il y a peut-être des dizaines d’itérations à calculer, vous pouvez résumer l’exécution sans aller dans chaque détail de chaque itération.",
+        "hash_ref": {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "757138035ddf58fc99a0b0a18b99797bc03babfce06f151779556b02d1c66185"
+        }
+      }
+    }
+  ]
+}

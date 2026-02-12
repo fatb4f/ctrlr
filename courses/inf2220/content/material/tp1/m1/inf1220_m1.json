@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "course": "INF1220",
+    "module": "M1",
+    "unit": "m1-07",
+    "generated_on": "2026-01-19",
+    "coverage_scale": {
+      "direct": "Explicitly taught and practiced.",
+      "partial": "Present but not the main focus; add a small drill to make it deliberate.",
+      "gap": "Not covered; keep INF1220 material as authority or add a small local insert."
+    },
+    "sources": {
+      "runestone_pythonds": "https://runestone.academy/ns/books/published/pythonds/index.html",
+      "whirlwind": "https://github.com/jakevdp/WhirlwindTourOfPython/tree/master",
+      "thinkpython": "https://github.com/AllenDowney/ThinkPython",
+      "learn_python3": "https://github.com/jerry-git/learn-python3"
+    }
+  },
+  "objectives": [
+    {
+      "key": "m1-07.prereqs",
+      "title": "Prerequisites & expected prior knowledge",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Préalables",
+        "line_hint": "L105"
+      },
+      "materials": [
+        {
+          "source_id": "runestone_pythonds",
+          "coverage": "direct",
+          "where": ["Getting Started with Data", "Review of Basic Python"]
+        },
+        {
+          "source_id": "whirlwind",
+          "coverage": "direct",
+          "where": [
+            "How to Run Python Code",
+            "Basic Python Syntax",
+            "Python Semantics: Variables",
+            "Built-In Scalar Types"
+          ]
+        },
+        {
+          "source_id": "thinkpython",
+          "coverage": "direct",
+          "where": [
+            "Ch 1: The way of the program",
+            "Ch 2: Variables, expressions, and statements"
+          ]
+        },
+        {
+          "source_id": "learn_python3",
+          "coverage": "direct",
+          "where": [
+            "Beginner: Numbers",
+            "Beginner: Strings (and early setup notebooks)"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "m1-07.algorithm_definition",
+      "title": "What an algorithm is (definition, properties, examples)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Qu’est-ce qu’un algorithme ?",
+        "line_hint": "L131"
+      },
+      "materials": [
+        {
+          "source_id": "runestone_pythonds",
+          "coverage": "direct",
+          "where": ["Introduction (problem solving + algorithm framing)"]
+        },
+        {
+          "source_id": "whirlwind",
+          "coverage": "gap",
+          "where": []
+        },
+        {
+          "source_id": "thinkpython",
+          "coverage": "partial",
+          "where": ["Ch 1 (programs + reasoning framing)"]
+        },
+        {
+          "source_id": "learn_python3",
+          "coverage": "partial",
+          "where": ["Beginner control-flow notebooks (constructs, not formal definition)"]
+        }
+      ]
+    },
+    {
+      "key": "m1-07.pseudocode",
+      "title": "What pseudocode is (purpose, conventions, readability)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Qu’est-ce que le pseudo-code ?",
+        "line_hint": "L142"
+      },
+      "materials": [
+        {
+          "source_id": "runestone_pythonds",
+          "coverage": "partial",
+          "where": ["Structured control flow examples (Python-as-executable-pseudocode)"]
+        },
+        {
+          "source_id": "whirlwind",
+          "coverage": "gap",
+          "where": []
+        },
+        {
+          "source_id": "thinkpython",
+          "coverage": "partial",
+          "where": ["Readable examples in early chapters; conditionals chapter for clarity"]
+        },
+        {
+          "source_id": "learn_python3",
+          "coverage": "gap",
+          "where": []
+        }
+      ],
+      "gap_note": "These sources are Python-first; keep INF1220 pseudocode conventions as authority. Optionally add a 1-page local mapping (pseudo-keywords -> Python constructs)."
+    },
+    {
+      "key": "m1-07.variables_values",
+      "title": "Variables and values (assignment, initialization, basic types)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Variables et valeurs",
+        "line_hint": "L164"
+      },
+      "materials": [
+        {
+          "source_id": "runestone_pythonds",
+          "coverage": "direct",
+          "where": ["Review of Basic Python (variables/types in examples)"]
+        },
+        {
+          "source_id": "whirlwind",
+          "coverage": "direct",
+          "where": ["Python Semantics: Variables", "Built-In Scalar Types"]
+        },
+        {
+          "source_id": "thinkpython",
+          "coverage": "direct",
+          "where": ["Ch 2: Variables, expressions, and statements"]
+        },
+        {
+          "source_id": "learn_python3",
+          "coverage": "direct",
+          "where": ["Beginner: Numbers", "Beginner: Strings"]
+        }
+      ]
+    },
+    {
+      "key": "m1-07.boolean_logic",
+      "title": "Boolean logic (true/false, AND/OR/NOT, precedence, parentheses)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Logique booléenne",
+        "line_hint": "L229"
+      },
+      "materials": [
+        {
+          "source_id": "runestone_pythonds",
+          "coverage": "direct",
+          "where": ["Selection (if/elif/else) + compound conditions"]
+        },
+        {
+          "source_id": "whirlwind",
+          "coverage": "direct",
+          "where": ["Python Semantics: Operators", "Control Flow Statements"]
+        },
+        {
+          "source_id": "thinkpython",
+          "coverage": "direct",
+          "where": ["Ch 5: Conditionals and recursion (logical operators)"]
+        },
+        {
+          "source_id": "learn_python3",
+          "coverage": "direct",
+          "where": ["Beginner: Conditionals"]
+        }
+      ],
+      "practice_insert": {
+        "recommended_drill": "Generate a 2-variable truth table in Python and verify De Morgan laws; then rewrite the same logic in INF1220 pseudocode form."
+      }
+    },
+    {
+      "key": "m1-07.math_truth_tables",
+      "title": "Math recall: propositions & truth tables (formal basis for AND/OR/NOT)",
+      "pointers": [
+        {
+          "path": "Rappel mathématique _ INF 1220 - Introduction à la programmation.html",
+          "anchor": "1.1 Les propositions",
+          "line_hint": "L21"
+        },
+        {
+          "path": "Rappel mathématique _ INF 1220 - Introduction à la programmation.html",
+          "anchor": "1.1.1 Table des valeurs de vérité",
+          "line_hint": "L22"
+        }
+      ],
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "gap", "where": [] },
+        { "source_id": "whirlwind", "coverage": "gap", "where": [] },
+        { "source_id": "thinkpython", "coverage": "gap", "where": [] },
+        { "source_id": "learn_python3", "coverage": "gap", "where": [] }
+      ],
+      "gap_note": "Keep the INF1220 math recall doc as authority. Use Python only as an oracle to generate/check truth tables."
+    },
+    {
+      "key": "m1-07.math_implication_equivalence",
+      "title": "Math recall: implication / equivalence as “spec language” for conditions",
+      "pointer": {
+        "path": "Rappel mathématique _ INF 1220 - Introduction à la programmation.html",
+        "anchor": "1.3.2 Relation d’équivalence",
+        "line_hint": "L31"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "gap", "where": [] },
+        { "source_id": "whirlwind", "coverage": "gap", "where": [] },
+        {
+          "source_id": "thinkpython",
+          "coverage": "partial",
+          "where": ["Ch 5 conditional reasoning (if/then in code)"]
+        },
+        { "source_id": "learn_python3", "coverage": "gap", "where": [] }
+      ],
+      "practice_insert": {
+        "recommended_drill": "Implement impl(p,q)=(not p) or q and iff(p,q)=impl(p,q) and impl(q,p); verify by truth table."
+      }
+    },
+    {
+      "key": "m1-07.conditionals_pseudocode",
+      "title": "Conditionals in pseudocode (IF / THEN / ELSE / END IF)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Logique booléenne",
+        "line_hint": "L229"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "direct", "where": ["Selection (if/elif/else)"] },
+        { "source_id": "whirlwind", "coverage": "direct", "where": ["Control Flow Statements"] },
+        { "source_id": "thinkpython", "coverage": "direct", "where": ["Ch 5: Conditionals and recursion"] },
+        { "source_id": "learn_python3", "coverage": "direct", "where": ["Beginner: Conditionals"] }
+      ],
+      "note": "These are Python conditionals; translate to INF1220 pseudocode keywords for submission."
+    },
+    {
+      "key": "m1-07.math_binary_relations",
+      "title": "Math recall: binary relations (equivalence, order) as the model for comparisons/tests",
+      "pointer": {
+        "path": "Rappel mathématique _ INF 1220 - Introduction à la programmation.html",
+        "anchor": "1.3.2 Relation d’équivalence",
+        "line_hint": "L31"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "partial", "where": ["Comparisons used in examples"] },
+        { "source_id": "whirlwind", "coverage": "partial", "where": ["Operators / comparisons"] },
+        { "source_id": "thinkpython", "coverage": "partial", "where": ["Ch 5 relational operators in conditions"] },
+        { "source_id": "learn_python3", "coverage": "partial", "where": ["Conditionals comparisons"] }
+      ],
+      "gap_note": "Formal definition/properties of relations live in INF1220 math recall; Python sources cover only operational comparisons."
+    },
+    {
+      "key": "m1-07.programmer_notation",
+      "title": "Programmer notation (symbolic operators: &&, ||, !)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Notation des programmeurs",
+        "line_hint": "L365"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "partial", "where": ["Boolean operators in Python"] },
+        { "source_id": "whirlwind", "coverage": "partial", "where": ["Operators"] },
+        { "source_id": "thinkpython", "coverage": "partial", "where": ["Ch 5 logical operators"] },
+        { "source_id": "learn_python3", "coverage": "partial", "where": ["Conditionals"] }
+      ],
+      "mapping": { "&&": "and", "||": "or", "!": "not" }
+    },
+    {
+      "key": "m1-07.loops",
+      "title": "Loops (iteration, counters, termination conditions)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "La boucle",
+        "line_hint": "L380"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "direct", "where": ["Iteration: for loops, while loops"] },
+        { "source_id": "whirlwind", "coverage": "direct", "where": ["Control Flow Statements"] },
+        { "source_id": "thinkpython", "coverage": "direct", "where": ["Ch 7: Iteration and search"] },
+        { "source_id": "learn_python3", "coverage": "direct", "where": ["Beginner: For loops (and related loop notebooks)"] }
+      ]
+    },
+    {
+      "key": "m1-07.arrays",
+      "title": "Arrays (indexing concept, 0-based vs 1-based, access by index)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Tableau",
+        "line_hint": "L431"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "direct", "where": ["Lists and strings: indexing and slices"] },
+        { "source_id": "whirlwind", "coverage": "direct", "where": ["Built-In Data Structures (lists/tuples)"] },
+        { "source_id": "thinkpython", "coverage": "direct", "where": ["Ch 9: Lists"] },
+        { "source_id": "learn_python3", "coverage": "direct", "where": ["Beginner: Lists"] }
+      ]
+    },
+    {
+      "key": "m1-07.accumulator",
+      "title": "Accumulator pattern (sum/average over an array)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Exemple : Calcul de la moyenne",
+        "line_hint": "L470"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "direct", "where": ["Sequence traversal with loops (for)", "List operations"] },
+        { "source_id": "whirlwind", "coverage": "direct", "where": ["Control Flow Statements + Built-In Data Structures"] },
+        { "source_id": "thinkpython", "coverage": "direct", "where": ["Ch 7: Iteration", "Ch 9: Lists"] },
+        { "source_id": "learn_python3", "coverage": "direct", "where": ["For loops + Lists notebooks"] }
+      ],
+      "practice_insert": { "recommended_drill": "Write average(xs) using manual accumulator + count; handle empty list explicitly." }
+    },
+    {
+      "key": "m1-07.flowchart_pseudocode_mapping",
+      "title": "Flowchart ↔ pseudocode mapping (average example)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Exemple : Calcul de la moyenne",
+        "line_hint": "L470"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "gap", "where": [] },
+        { "source_id": "whirlwind", "coverage": "gap", "where": [] },
+        { "source_id": "thinkpython", "coverage": "partial", "where": ["Execution tracing style in examples"] },
+        { "source_id": "learn_python3", "coverage": "gap", "where": [] }
+      ],
+      "gap_note": "These sources are not flowchart-first. Use INF1220 example as authority; optionally generate trace tables with Python."
+    },
+    {
+      "key": "m1-07.pseudocode_to_code_java",
+      "title": "Translating pseudocode to real code (Java example)",
+      "pointer": {
+        "path": "cbia-content/inf1220/syllabus/m1/raw/m1-07-Les algorithmes.md",
+        "anchor": "Exemple : Calcul de la moyenne",
+        "line_hint": "L470"
+      },
+      "materials": [
+        { "source_id": "runestone_pythonds", "coverage": "partial", "where": ["Python control structures"] },
+        { "source_id": "whirlwind", "coverage": "partial", "where": ["Python control flow + data structures"] },
+        { "source_id": "thinkpython", "coverage": "partial", "where": ["Python iteration/lists"] },
+        { "source_id": "learn_python3", "coverage": "partial", "where": ["Python loops/lists"] }
+      ],
+      "gap_note": "Java translation is not covered by these Python sources. Use them for pseudocode→Python self-checks; keep pseudocode→Java anchored in INF1220 materials."
+    }
+  ]
+}
+

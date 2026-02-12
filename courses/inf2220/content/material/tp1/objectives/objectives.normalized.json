@@ -1,0 +1,83 @@
+{
+  "track": "inf1220",
+  "scope": "tp1",
+  "objectives": [
+    {
+      "id": "INF1220-TP1-O-01",
+      "statement": "Design an efficient pseudocode algorithm that decides whether the sum of a positive-number array exceeds 100, using early termination and handling extreme edge cases.",
+      "derived_from": [
+        "INF1220-TP1-O-01"
+      ],
+      "evidence": [
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "40f45f7606b8e95a875c299ec7d85b423db1d206a8df5c95046d064ca5e94c67"
+        },
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "dcc055a75bef63710b4d9fa8127aa25717eb94745ce7d78daf079647fa708307"
+        },
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "2c63151cb711be053a577befa2c2de7276cc8b88f9773040add5cf2744317417"
+        }
+      ]
+    },
+    {
+      "id": "INF1220-TP1-O-02",
+      "statement": "Produce precise, readable, language-agnostic pseudocode (not Java/Python) with clear inputs, variables, and outputs.",
+      "derived_from": [
+        "INF1220-TP1-O-02"
+      ],
+      "evidence": [
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "047c0fcf03ea7986456782055f84351fb23ec96073f92c4acb384f9f9ada57d8"
+        }
+      ]
+    },
+    {
+      "id": "INF1220-TP1-O-03",
+      "statement": "Execute pseudocode rigorously by tracing it line-by-line and reporting variable values at each step.",
+      "derived_from": [
+        "INF1220-TP1-O-03"
+      ],
+      "evidence": [
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "519214ff116d3c1332cc276cdfd9b69394a81628b5d56c6c14d5717864c92b72"
+        }
+      ]
+    },
+    {
+      "id": "INF1220-TP1-O-04",
+      "statement": "Diagnose and clearly explain a logical error in given pseudocode (FizzBuzz variant) and provide a corrected version.",
+      "derived_from": [
+        "INF1220-TP1-O-04"
+      ],
+      "evidence": [
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "405b6cbbef574b3686d4b1616e0d079deab28fd7bbdfb9656c202d2cdcbb8ec8"
+        },
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "757138035ddf58fc99a0b0a18b99797bc03babfce06f151779556b02d1c66185"
+        }
+      ]
+    },
+    {
+      "id": "INF1220-TP1-O-05",
+      "statement": "Compare executions of original versus corrected pseudocode and summarize iterative behavior to highlight logical differences.",
+      "derived_from": [
+        "INF1220-TP1-O-05"
+      ],
+      "evidence": [
+        {
+          "file_sha256": "f2d5a6ae9f54d4faf76efa0f81f33a8a4710760a1af9d3d18bf5a520cd2e1d07",
+          "quote_sha256": "757138035ddf58fc99a0b0a18b99797bc03babfce06f151779556b02d1c66185"
+        }
+      ]
+    }
+  ]
+}
