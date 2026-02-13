@@ -2,6 +2,13 @@
 
 Backward dependencies on `oracle_api`.
 
+## Evidence-First DSA Workflow tools
+
+- `pytest`, `hypothesis`
+- `snoop`, `birdseye`
+- `hunter`, `viztracer`
+- `coverage`, `pytest-cov`
+
 ## Tool stack (highest priority)
 
 - `packages/oracle_tools/src/oracle_tools/mermaid.py`

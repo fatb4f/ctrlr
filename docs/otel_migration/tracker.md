@@ -3,6 +3,13 @@
 This tracker covers the deprecation of `oracle_api` and adoption of an
 OpenTelemetry-based evidence stack.
 
+## Evidence-First DSA Workflow tools
+
+* `pytest`, `hypothesis`
+* `snoop`, `birdseye`
+* `hunter`, `viztracer`
+* `coverage`, `pytest-cov`
+
 ## Tracker
 
 1. Define OTEL evidence schema (span + event attributes) for the DSA workflow.
