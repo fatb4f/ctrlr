@@ -246,6 +246,9 @@ class OTelRuntime:
             current = trace.get_current_span()
             current.add_event(name, merged)
 
+    def emit_event(self, name: str, attributes: dict[str, Any]) -> None:
+        self._emit_event(name, attributes)
+
     def emit_guard(self, condition: str, status: str) -> None:
         if status not in _VALID_STATUS:
             raise ValueError(f"invalid guard status: {status}")

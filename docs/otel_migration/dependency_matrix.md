@@ -68,6 +68,34 @@ OTel compatibility is satisfied when all of the following are true:
 - `coverage`, `pytest-cov`: export run-level coverage summaries as OTEL-linked
   evidence metadata.
 
+## M3 adapter output contract (locked)
+
+Each adapter path must emit one `oracle.step` span with required schema keys:
+`oracle.evidence.schema_version`, `oracle.run_id`, `oracle.seq`, and
+`oracle.variant_id` or `oracle.run_label`.
+
+- `pytest`/`hypothesis`
+  - Shape: step span + `oracle.pytest.case` event.
+  - Correlation keys: `oracle.run_id`, `oracle.step_id`, `oracle.adapter.seq`.
+  - Ordering: `oracle.seq` on span; `oracle.adapter.seq` on case events.
+- `snoop`/`birdseye`
+  - Shape: step span + `oracle.snoop.event` or `oracle.birdseye.frame` events.
+  - Correlation keys: `oracle.run_id`, `oracle.step_id`, `oracle.adapter.seq`.
+  - Ordering: `oracle.seq` on span; `oracle.adapter.seq` on trace/frame events.
+- `hunter`/`viztracer`
+  - Shape: step span + `oracle.hunter.event` or `oracle.viztracer.event` events.
+  - Correlation keys: `oracle.run_id`, `oracle.step_id`, `oracle.adapter.seq`.
+  - Ordering: `oracle.seq` on span; `oracle.adapter.seq` for event order.
+- `coverage`/`pytest-cov`
+  - Shape: step span + `oracle.coverage.summary` event.
+  - Correlation keys: `oracle.run_id`, `oracle.step_id`, `oracle.adapter.seq`.
+  - Ordering: run summary uses the step span `oracle.seq` and summary event
+    `oracle.adapter.seq`.
+
+All adapter paths must also emit `oracle.guard`, `oracle.invariant`, and
+`oracle.explanation` events to preserve materializer compatibility for step
+sequence, invariant/guard outcomes, and provenance.
+
 ## Adapter requirements for non-OTel-native tools
 
 `snoop`, `birdseye`, `hunter`, and `viztracer` are treated as non-OTel-native

@@ -67,6 +67,8 @@ Exit criteria:
 Evidence:
 1. At least one CI test per adapter path.
 2. Generated evidence demonstrates required linkage keys.
+3. Adapter contract section in `docs/otel_migration/dependency_matrix.md`
+   defines shape/correlation/order for each path.
 
 ### M4 - Workflow compatibility validated
 
