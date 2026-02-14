@@ -33,15 +33,18 @@ Compatibility is complete when:
 ## Tracker
 
 1. Define OTEL evidence schema (span + event attributes) for the DSA workflow.
-2. Implement OTEL instrumentation helpers independent of `oracle_api` and
+2. Publish schema contract/versioning doc with required keys
+   (`oracle.evidence.schema_version`, run/variant labels, ordering, guard and
+   invariant outcomes, VS Code + Marimo provenance fields).
+3. Implement OTEL instrumentation helpers independent of `oracle_api` and
    `oracle_tools`.
-3. Build adapters/materializers for workflow tools
+4. Build adapters/materializers for workflow tools
    (`pytest`/`hypothesis`, `snoop`/`birdseye`, `hunter`/`viztracer`,
    `coverage`/`pytest-cov`).
-4. Validate VS Code OTel compatibility against the milestones above.
-5. Validate Marimo OTel compatibility against the milestones above.
-6. Update docs to OTEL-only guidance for evidence-first workflows.
-7. Add verification tests for OTEL evidence (schema, export, and tool
+5. Validate VS Code OTel compatibility against the milestones above.
+6. Validate Marimo OTel compatibility against the milestones above.
+7. Update docs to OTEL-only guidance for evidence-first workflows.
+8. Add verification tests for OTEL evidence (schema, export, and tool
    correlation).
-8. Remove/deprecate remaining `oracle_api` and `oracle_tools` usage (docs,
+9. Remove/deprecate remaining `oracle_api` and `oracle_tools` usage (docs,
    tests, imports, package wiring).

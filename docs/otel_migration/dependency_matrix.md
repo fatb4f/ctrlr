@@ -17,6 +17,14 @@ OpenTelemetry compatibility contract for the Evidence-First DSA workflow.
 
 ## OTel compatibility definitions
 
+Required OTEL evidence metadata (all workflows):
+
+- `oracle.evidence.schema_version`
+- `oracle.run_id`
+- `oracle.variant_id` and/or `oracle.run_label`
+- deterministic step ordering key (`oracle.seq`)
+- guard/invariant outcome fields
+
 ### VS Code use case
 
 OTel compatibility is satisfied when all of the following are true:
@@ -24,6 +32,7 @@ OTel compatibility is satisfied when all of the following are true:
 - Running tests/debug sessions from VS Code emits OTEL traces for algorithm
   runs (operations, guards, invariants, transitions).
 - Evidence-first tool outputs can be correlated to the same trace/run id.
+- Editor provenance is present (`code.filepath`, `code.lineno` at minimum).
 - OTEL export works with both local development (`console`/`file`) and OTLP
   endpoints configured through environment variables.
 - Failure analysis remains actionable from VS Code output (trace id + event
@@ -34,6 +43,7 @@ OTel compatibility is satisfied when all of the following are true:
 OTel compatibility is satisfied when all of the following are true:
 
 - Executing notebook cells emits OTEL traces/events with cell provenance.
+- Notebook provenance is present (`oracle.notebook_id`, `oracle.cell_id`).
 - Evidence artifacts rendered in notebooks map to trace/run ids so users can
   navigate from explanation to raw telemetry.
 - OTEL export supports the same environment-variable configuration used in VS
