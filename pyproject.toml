@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "oracle"
 version = "0.1.0"
-description = "Gatekeeper repo for oracle_api, oracle_tools, and course content"
+description = "OTEL-native runtime, adapters, and materializers for evidence-first DSA workflows"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
@@ -13,6 +13,4 @@ dependencies = []
 [tool.uv.workspace]
 members = [
   "packages/oracle",
-  "packages/oracle_api",
-  "packages/oracle_tools",
 ]

@@ -107,6 +107,8 @@ Exit criteria:
 Evidence:
 1. Import checks pass for replacement modules and fail for deprecated modules.
 2. Final cleanup PR removes remaining deprecated usage.
+3. CI gate workflow `.github/workflows/deprecation-gates.yml` enforces
+   import/dependency/docs policies for deprecated packages.
 
 ## Tracker
 

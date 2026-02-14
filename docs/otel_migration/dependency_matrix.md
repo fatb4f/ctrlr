@@ -123,6 +123,30 @@ Minimum acceptance criteria for all four tools:
 - OTEL export path works with local exporters and OTLP endpoints.
 - At least one verification test per adapter path in CI.
 
+## M6 enforcement gates
+
+Deprecation enforcement is implemented through CI and integration tests:
+
+- Import gate
+  - `integration/tests/test_deprecation_enforcement.py` statically scans
+    `packages/oracle/src/**` and `integration/tests/**` and fails on legacy
+    imports:
+    - `import oracle_api`, `from oracle_api ...`
+    - `import oracle_tools`, `from oracle_tools ...`
+- Dependency gate
+  - `integration/tests/test_deprecation_enforcement.py` verifies
+    `pyproject.toml` workspace wiring excludes `packages/oracle_api` and
+    `packages/oracle_tools`.
+  - The same test verifies `packages/oracle/pyproject.toml` has no dependency
+    on legacy packages.
+- Docs gate
+  - `integration/tests/test_deprecation_enforcement.py` rejects primary legacy
+    install/import recommendations in `README.md` and `docs/**` and requires
+    explicit deprecation labeling for any legacy mention.
+- CI policy
+  - `.github/workflows/deprecation-gates.yml` runs enforcement tests plus OTEL
+    compatibility suites on pull requests and `main`.
+
 ## Legacy dependency matrix (to remove)
 
 - `packages/oracle_tools/src/oracle_tools/mermaid.py`
@@ -139,7 +163,9 @@ Minimum acceptance criteria for all four tools:
 ## Repo integrations
 
 - `integration/tests/test_imports.py`
-  - Imports `oracle_api`.
+  - Imports `oracle` for OTEL-native smoke coverage.
+- `integration/tests/test_deprecation_enforcement.py`
+  - Enforces import/dependency/docs deprecation gates.
 
 ## Docs + guidance
 
@@ -157,7 +183,7 @@ Minimum acceptance criteria for all four tools:
 ## Package metadata
 
 - `pyproject.toml`
-  - Workspace member includes `packages/oracle_api`.
+  - Workspace primary path is `packages/oracle`.
 - `packages/oracle_api/*`
   - Tests + modules.
 
