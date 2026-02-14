@@ -1,0 +1,66 @@
+{
+  "contract": "oracle.otel.schema_contract",
+  "version": "1.0.0",
+  "span": {
+    "required_attributes": [
+      "oracle.evidence.schema_version",
+      "oracle.run_id",
+      "oracle.seq"
+    ],
+    "required_one_of": [
+      [
+        "oracle.variant_id",
+        "oracle.run_label"
+      ]
+    ]
+  },
+  "events": {
+    "oracle.guard": {
+      "required_attributes": [
+        "oracle.guard.condition",
+        "oracle.guard.status"
+      ],
+      "enums": {
+        "oracle.guard.status": [
+          "pass",
+          "fail",
+          "skip"
+        ]
+      }
+    },
+    "oracle.invariant": {
+      "required_attributes": [
+        "oracle.invariant.id",
+        "oracle.invariant.statement",
+        "oracle.invariant.status"
+      ],
+      "enums": {
+        "oracle.invariant.status": [
+          "pass",
+          "fail",
+          "skip"
+        ]
+      }
+    },
+    "oracle.explanation": {
+      "required_attributes": [
+        "oracle.explanation.text"
+      ],
+      "enums": {}
+    }
+  },
+  "provenance": {
+    "vscode": {
+      "required_when_present": [
+        "code.filepath",
+        "code.lineno"
+      ]
+    },
+    "marimo": {
+      "required": [
+        "oracle.notebook_id",
+        "oracle.cell_id"
+      ]
+    }
+  }
+}
