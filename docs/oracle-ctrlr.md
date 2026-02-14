@@ -1,27 +1,20 @@
 # Oracle Tool Stack and Evidence-First Workflow
 
-This document describes the tooling stack (formerly “ctrlr”) and how it maps to
-the current oracle layout. The EOFL loop is decoupled from the stack and is
-defined separately in `docs/eofl-oracle.md`.
+This document describes the OTEL-native stack and how it maps to the current
+`oracle` layout.
 
-## 1) Core Pieces (oracle_api)
+## 1) Core package (`oracle`)
 
-`oracle_api` is the stable substrate for evidence-first work:
-* Contracts (dataclass models): `Lens`, `Span`, `Step`, `RunCapsule`
-* Trace runtime: `run(...)`, `span(...)`, `step(...)` -> `trace.jsonl`
-* Control gates: `require(...)`, `ensure(...)`, `invariant(...)`
+`oracle` is the canonical implementation for evidence-first DSA work:
+* OTEL runtime helpers for run/span/step/event emission
+* schema-aligned evidence keys and provenance fields
+* adapters/materializers for workflow tool outputs
 
-Purpose: a stable “observer language” for algorithms and their transitions.
+Purpose: one OTEL-native observer language for algorithm transitions, replay,
+and comparison.
 
-## 2) Toolstack (oracle_tools + extras)
+## 2) Evidence-First DSA tool stack
 
-`oracle_tools` provides core learning tools:
-* budgeted runs and deterministic reproduction
-* Mermaid renderers for predictive flow and calltree
-* tooling that turns trace evidence into interpretable structure
-
-Optional extras are used as **playbook sequences** built from the
-Evidence‑First DSA Workflow:
 * `pytest`, `hypothesis`
 * `snoop`, `birdseye`
 * `hunter`, `viztracer`
@@ -35,7 +28,7 @@ The canonical workflow is the Evidence‑First DSA Workflow:
 INF1220-specific usage is a direct application of that workflow to
 pseudocode-first deliverables.
 
-## 4) Example (DSA + evidence-first)
+## 4) Example (DSA + OTEL evidence-first)
 
 Example: stack operations in a course worktree.
 
@@ -50,3 +43,9 @@ Example: stack operations in a course worktree.
 6. Summarize in one paragraph: what changed and why it’s safe.
 
 This workflow produces evidence artifacts first, then code/pseudocode follows.
+
+## 5) Deprecated references
+
+`oracle_api` and `oracle_tools` are deprecated and should not be used as the
+primary path in new setup or usage docs. Replacement mapping is documented in
+`docs/otel_migration/replacement_mapping.md`.

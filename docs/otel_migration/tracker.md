@@ -94,6 +94,8 @@ Exit criteria:
 Evidence:
 1. Docs diff removes stale install/import instructions.
 2. Linkable migration notes are available in repo docs.
+3. `docs/otel_migration/replacement_mapping.md` provides canonical replacement
+   mapping for `oracle_api` and `oracle_tools`.
 
 ### M6 - Deprecation enforcement
 

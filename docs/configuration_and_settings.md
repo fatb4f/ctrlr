@@ -5,7 +5,7 @@ This document defines the local setup for development and learning work in the
 
 ## 1) Python venv
 
-Create and activate a virtual environment inside each worktree you use.
+Create and activate a virtual environment in the active worktree.
 
 ```bash
 python -m venv .venv
@@ -13,15 +13,17 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 ```
 
-Install project dependencies from the repo root:
+Install the OTEL-native runtime package from repo root:
 
 ```bash
-python -m pip install -e packages/oracle_api
-python -m pip install -e packages/oracle_tools
+python -m pip install -e packages/oracle
 ```
 
-If you need extras later (tests, hypothesis, etc.), add them here once they are
-defined in `pyproject.toml`.
+Optional OTEL exporter extras:
+
+```bash
+python -m pip install -e "packages/oracle[otel]"
+```
 
 ## 2) VS Code + Extensions
 
@@ -57,27 +59,43 @@ Keep these roles stable:
 * VS Code is the primary debugger and test runner.
 * Marimo is the evidence surfacing and explanation surface.
 
-## 5) API + Debug Tools
+## 5) OTEL runtime config
 
-The API and tooling packages are installed in editable mode:
+Set exporters via environment variables:
 
 ```bash
-python -m pip install -e packages/oracle_api
-python -m pip install -e packages/oracle_tools
+export OTEL_TRACES_EXPORTER=console
+export OTEL_SERVICE_NAME=oracle
+export OTEL_RESOURCE_ATTRIBUTES=deployment.environment=dev,service.namespace=oracle
 ```
 
-Core tooling for "think like the interpreter":
-* ctrlr contracts and trace runtime (oracle_api)
-* budgeting/seeded runs + Mermaid renderers (oracle_tools)
+OTLP example:
+
+```bash
+export OTEL_TRACES_EXPORTER=otlp
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
+```
+
+## 6) Evidence-First DSA Workflow tools
 
 Optional debugging tools (install only if needed):
 * `pytest`
 * `hypothesis`
 * `snoop`
 * `birdseye`
+* `hunter`
+* `viztracer`
+* `coverage`
+* `pytest-cov`
 
 Add these to the venv when you are ready to use them:
 
 ```bash
-python -m pip install pytest hypothesis snoop birdseye
+python -m pip install pytest hypothesis snoop birdseye hunter viztracer coverage pytest-cov
 ```
+
+## 7) Deprecated packages
+
+`oracle_api` and `oracle_tools` are deprecated. Do not use them as primary
+install/import targets in new workflows. See
+`docs/otel_migration/replacement_mapping.md` for migration mapping.
